@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annual School Activity Plan 2026 - Habras International School</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -81,21 +81,31 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.06);
         }
 
-        h1 {
-            font-size: 2.4rem;
+        /* New Header Typography Hierarchy */
+        .school-name {
+            font-size: 2.2rem;
             font-weight: 700;
-            color: #111827;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            color: var(--color-jun); /* Elegant Steel Blue */
+            margin-bottom: 2px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .subtitle {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--color-jun);
-            margin-bottom: 30px;
+        .school-location {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #64748b;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 30px;
+            letter-spacing: -0.5px;
         }
 
         /* Beautifully Aligned & Colored Intro Box */
@@ -270,8 +280,9 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .container { padding: 20px 15px; }
+            .school-name { font-size: 1.6rem; }
+            .school-location { font-size: 0.95rem; }
             h1 { font-size: 1.8rem; }
-            .subtitle { font-size: 0.95rem; }
             .intro-text { padding: 25px 20px; font-size: 1rem; }
             .calendar-grid { grid-template-columns: 1fr; gap: 25px; }
             .month-card { padding: 25px 20px; }
@@ -285,8 +296,9 @@
         
         <header>
             <img src="https://i.postimg.cc/4xBYD3cX/Screenshot-2026-01-14-12-46-53-47-680d03679600f7af0b4c700c6b270fe7.jpg" alt="Habras International School Logo" class="logo">
+            <h2 class="school-name">Habras International School</h2>
+            <div class="school-location">Parimpora, Srinagar</div>
             <h1>ANNUAL SCHOOL ACTIVITY PLAN – 2026</h1>
-            <div class="subtitle">Habras International School, Parimpora, Srinagar</div>
             
             <div class="intro-text">
                 Welcome to the Annual School Activity Plan – 2026, thoughtfully designed to promote academic excellence, leadership, creativity, physical fitness, and holistic student development throughout the year. This calendar reflects our commitment to meaningful learning experiences, student engagement, and a vibrant school culture.
