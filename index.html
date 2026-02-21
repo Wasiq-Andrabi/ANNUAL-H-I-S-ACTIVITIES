@@ -106,16 +106,25 @@
             font-size: 1.2rem;
             font-weight: 600;
             color: #ff6b6b;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
+        /* Beautiful Intro Box */
         .intro-text {
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--text-light);
-            font-size: 1.05rem;
+            background: #f8fafc;
+            border-left: 5px solid #4ecdc4;
+            padding: 25px 35px;
+            border-radius: 12px;
+            max-width: 850px;
+            margin: 30px auto 10px auto;
+            color: #475569;
+            font-size: 1.1rem;
+            text-align: justify; /* Properly aligns text evenly */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            line-height: 1.8;
+            position: relative;
         }
 
         /* Calendar Grid */
@@ -163,7 +172,7 @@
 
         /* Map colors to titles */
         .card-mar .month-title { color: var(--color-mar); }
-        .card-apr .month-title { color: #16a085; } /* Darker green for readability */
+        .card-apr .month-title { color: #16a085; }
         .card-may .month-title { color: #d35400; }
         .card-jun .month-title { color: #2980b9; }
         .card-jul .month-title { color: #8e44ad; }
@@ -254,6 +263,10 @@
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             .subtitle { font-size: 1rem; }
+            .intro-text { 
+                padding: 20px; 
+                text-align: left; /* Switches to left align on small phones to avoid awkward spacing */
+            }
             .calendar-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -266,9 +279,10 @@
             <img src="https://i.postimg.cc/4xBYD3cX/Screenshot-2026-01-14-12-46-53-47-680d03679600f7af0b4c700c6b270fe7.jpg" alt="Habras International School Logo" class="logo">
             <h1>ANNUAL SCHOOL ACTIVITY PLAN – 2026</h1>
             <div class="subtitle">Habras International School, Parimpora, Srinagar</div>
-            <p class="intro-text">
+            
+            <div class="intro-text">
                 Welcome to the Annual School Activity Plan – 2026, thoughtfully designed to promote academic excellence, leadership, creativity, physical fitness, and holistic student development throughout the year. This calendar reflects our commitment to meaningful learning experiences, student engagement, and a vibrant school culture.
-            </p>
+            </div>
         </header>
 
         <div class="calendar-grid">
@@ -276,8 +290,8 @@
             <div class="month-card card-mar">
                 <h3 class="month-title"><i class="far fa-calendar-alt"></i> MARCH 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-pen-alt"></i> <span><span class="date">04–11 March</span> – FA2 Examination</span></li>
-                    <li><i class="fas fa-mosque"></i> <span><span class="date">09–14 March</span> – Preparation for Shabi-Qadr Programme</span></li>
+                    <li><i class="fas fa-pen-alt"></i> <span><span class="date">04 to 11 March</span> – FA2 Examination</span></li>
+                    <li><i class="fas fa-mosque"></i> <span><span class="date">09 to 14 March</span> – Preparation for Shabi-Qadr Programme</span></li>
                     <li><i class="fas fa-bullhorn"></i> <span><span class="date">14 March</span> – Result Declaration of FA2 Exam</span></li>
                     <li><i class="fas fa-star-and-crescent"></i> <span><span class="date">16 March</span> – Fazilati Shabi-Qadr Programme</span></li>
                     <li><i class="fas fa-spell-check"></i> <span><span class="date">28 March (Saturday)</span> – Spell Bee Challenge</span></li>
@@ -299,7 +313,7 @@
                 <h3 class="month-title"><i class="far fa-calendar-alt"></i> MAY 2026</h3>
                 <ul class="activity-list">
                     <li><i class="fas fa-hand-holding-medical"></i> <span><span class="date">09 May</span> – Helping Hands & First Aid Initiative (with Health Department Officials)</span></li>
-                    <li><i class="fas fa-file-signature"></i> <span><span class="date">18–25 May</span> – FA3 & FA4 Examinations</span></li>
+                    <li><i class="fas fa-file-signature"></i> <span><span class="date">18 to 25 May</span> – FA3 & FA4 Examinations</span></li>
                 </ul>
             </div>
 
@@ -333,7 +347,7 @@
                 <h3 class="month-title"><i class="far fa-calendar-alt"></i> SEPTEMBER 2026</h3>
                 <ul class="activity-list">
                     <li><i class="fas fa-chalkboard-teacher"></i> <span><span class="date">05 September</span> – Teachers’ Day</span></li>
-                    <li><i class="fas fa-smile-beam"></i> <span><span class="date">10 September</span> – Fun Day</span></li>
+                    <li><i class="fas fa-smile-beam"></i> <span><span class="date">10 September</span> – Fun Trip</span></li>
                     <li><i class="fas fa-volleyball-ball"></i> <span><span class="date">26 September</span> – Outdoor Sports Day</span></li>
                 </ul>
             </div>
