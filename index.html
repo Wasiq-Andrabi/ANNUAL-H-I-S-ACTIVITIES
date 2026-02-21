@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annual School Activity Plan 2026 - Habras International School</title>
+    <title>Annual School Activity Plan 2026-27 - Habras International School</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /* Base Variables & Reset */
         :root {
-            --bg-gradient: linear-gradient(135deg, #f6f8fd 0%, #e9f0f9 100%);
+            --bg-main: #f4f7f6;
             --text-main: #2c3e50;
             --text-light: #546e7a;
-            --card-bg: rgba(255, 255, 255, 0.95);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+            --card-bg: #ffffff;
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.1);
             
-            /* Month Accents */
-            --color-mar: #ff6b6b;
-            --color-apr: #4ecdc4;
-            --color-may: #feca57;
-            --color-jun: #48dbfb;
-            --color-jul: #ff9ff3;
-            --color-aug: #1dd1a1;
-            --color-sep: #5f27cd;
-            --color-oct: #ff9f43;
+            /* Category Colors (Elite School Style) */
+            --cat-academic: #2980b9; /* Blue */
+            --cat-sports: #27ae60;   /* Green */
+            --cat-cultural: #e67e22; /* Orange */
+            --cat-exam: #c0392b;     /* Maroon/Red */
+            --cat-trip: #8e44ad;     /* Purple */
+            --cat-science: #16a085;  /* Teal */
         }
 
         * {
@@ -38,31 +35,36 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: var(--bg-gradient);
+            background-color: var(--bg-main);
             color: var(--text-main);
             line-height: 1.6;
             position: relative;
-            overflow-x: hidden;
         }
 
-        /* Subtle Background Decoration */
+        /* Subtle School Logo Watermark Background */
         body::before {
-            content: "\f518 \f02d \f1fc \f54b \f0c3";
-            font-family: 'FontAwesome';
+            content: "";
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            font-size: 5rem;
-            color: rgba(0, 0, 0, 0.02);
-            word-spacing: 10vw;
-            line-height: 20vh;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw; height: 80vh;
+            background-image: url('https://i.postimg.cc/4xBYD3cX/Screenshot-2026-01-14-12-46-53-47-680d03679600f7af0b4c700c6b270fe7.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.03; /* Very faint */
             z-index: -1;
-            text-align: center;
             pointer-events: none;
         }
 
-        /* Container */
+        /* Premium Wrapper Border */
+        .layout-wrapper {
+            border-top: 6px solid var(--cat-academic);
+            min-height: 100vh;
+        }
+
         .container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -70,115 +72,138 @@
         /* Header Section */
         header {
             text-align: center;
-            background: white;
-            padding: 40px 20px;
-            border-radius: 20px;
+            background: var(--card-bg);
+            padding: 45px 30px;
+            border-radius: 16px;
             box-shadow: var(--shadow);
-            margin-bottom: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 6px;
-            background: linear-gradient(90deg, #ff6b6b, #feca57, #4ecdc4, #48dbfb, #5f27cd);
+            margin-bottom: 30px;
         }
 
         .logo {
-            max-width: 180px;
+            max-width: 160px;
             height: auto;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 700;
-            color: #1e272e;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+            color: #1a252f;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #ff6b6b;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #7f8c8d;
+            margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        /* Beautiful Intro Box */
-        .intro-text {
-            background: #f8fafc;
-            border-left: 5px solid #4ecdc4;
-            padding: 25px 35px;
-            border-radius: 12px;
-            max-width: 850px;
-            margin: 30px auto 10px auto;
-            color: #475569;
-            font-size: 1.1rem;
-            text-align: justify; /* Properly aligns text evenly */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-            line-height: 1.8;
-            position: relative;
+        .session-badge {
+            display: inline-block;
+            background: #edf2f7;
+            color: var(--cat-academic);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
         }
+
+        .motto {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--cat-cultural);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .intro-text {
+            color: #475569;
+            font-size: 1.05rem;
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Legend / Key */
+        .legend-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .legend-item i { font-size: 1.1rem; }
+
+        /* Color Classes Mapping */
+        .color-academic { color: var(--cat-academic); }
+        .color-sports { color: var(--cat-sports); }
+        .color-cultural { color: var(--cat-cultural); }
+        .color-exam { color: var(--cat-exam); }
+        .color-trip { color: var(--cat-trip); }
+        .color-science { color: var(--cat-science); }
 
         /* Calendar Grid */
         .calendar-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px; /* Increased spacing */
             margin-bottom: 50px;
+            align-items: start; /* Prevents awkward stretching of empty space */
         }
 
         /* Month Cards */
         .month-card {
             background: var(--card-bg);
             border-radius: 16px;
-            padding: 30px 25px;
+            padding: 35px 30px;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
-            border-top: 6px solid #ccc;
+            border-top: 4px solid #bdc3c7; /* Default soft border */
         }
 
         .month-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
         }
 
-        /* Specific Card Colors */
-        .card-mar { border-color: var(--color-mar); }
-        .card-apr { border-color: var(--color-apr); }
-        .card-may { border-color: var(--color-may); }
-        .card-jun { border-color: var(--color-jun); }
-        .card-jul { border-color: var(--color-jul); }
-        .card-aug { border-color: var(--color-aug); }
-        .card-sep { border-color: var(--color-sep); }
-        .card-oct { border-color: var(--color-oct); }
-
         .month-title {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            color: #2c3e50;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            border-bottom: 2px solid #f1f2f6;
+            padding-bottom: 15px;
         }
 
-        /* Map colors to titles */
-        .card-mar .month-title { color: var(--color-mar); }
-        .card-apr .month-title { color: #16a085; }
-        .card-may .month-title { color: #d35400; }
-        .card-jun .month-title { color: #2980b9; }
-        .card-jul .month-title { color: #8e44ad; }
-        .card-aug .month-title { color: #27ae60; }
-        .card-sep .month-title { color: var(--color-sep); }
-        .card-oct .month-title { color: #e67e22; }
+        .month-title i {
+            color: #95a5a6;
+            font-weight: 400;
+        }
 
         /* Activity Lists */
         .activity-list {
@@ -189,11 +214,14 @@
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
+            margin-bottom: 18px;
+            font-size: 1rem;
             color: #34495e;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #f1f2f6;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f8f9fa;
+            border-left: 4px solid transparent;
+            padding-left: 12px;
+            border-radius: 2px;
         }
 
         .activity-list li:last-child {
@@ -204,51 +232,77 @@
 
         .activity-list i {
             margin-top: 4px;
-            font-size: 1.1rem;
-            min-width: 20px;
+            font-size: 1.15rem;
+            min-width: 24px;
             text-align: center;
         }
-
-        /* Specific Icon Colors per card */
-        .card-mar i { color: var(--color-mar); }
-        .card-apr i { color: #16a085; }
-        .card-may i { color: #d35400; }
-        .card-jun i { color: #2980b9; }
-        .card-jul i { color: #8e44ad; }
-        .card-aug i { color: #27ae60; }
-        .card-sep i { color: var(--color-sep); }
-        .card-oct i { color: #e67e22; }
 
         .date {
             font-weight: 700;
-            display: inline-block;
-            margin-right: 5px;
-            color: #2c3e50;
+            color: #1a252f;
+            display: block;
+            margin-bottom: 2px;
+            font-size: 0.95rem;
         }
+
+        .event-name {
+            font-weight: 500;
+        }
+
+        .sub-note {
+            display: block;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-top: 4px;
+            font-style: italic;
+        }
+
+        /* Apply Category Colors to List Items */
+        .cat-academic { border-left-color: var(--cat-academic) !important; }
+        .cat-academic i { color: var(--cat-academic); }
+        
+        .cat-sports { border-left-color: var(--cat-sports) !important; }
+        .cat-sports i { color: var(--cat-sports); }
+        
+        .cat-cultural { border-left-color: var(--cat-cultural) !important; }
+        .cat-cultural i { color: var(--cat-cultural); }
+        
+        .cat-exam { border-left-color: var(--cat-exam) !important; }
+        .cat-exam i { color: var(--cat-exam); }
+        
+        .cat-trip { border-left-color: var(--cat-trip) !important; }
+        .cat-trip i { color: var(--cat-trip); }
+        
+        .cat-science { border-left-color: var(--cat-science) !important; }
+        .cat-science i { color: var(--cat-science); }
 
         /* Footer Section */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
+            background: #1a252f;
+            color: #ecf0f1;
             text-align: center;
-            padding: 50px 20px;
-            border-radius: 20px;
+            padding: 40px 20px;
+            border-radius: 16px;
             box-shadow: var(--shadow);
             margin-top: 20px;
         }
 
-        .footer-quote {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #feca57;
-        }
-
         .footer-desc {
             max-width: 700px;
-            margin: 0 auto 25px auto;
+            margin: 0 auto 20px auto;
             color: #bdc3c7;
-            font-size: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .disclaimer {
+            color: #f39c12;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(243, 156, 18, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
         }
 
         .footer-bottom {
@@ -257,122 +311,139 @@
             font-weight: 300;
             font-size: 0.9rem;
             letter-spacing: 1px;
+            color: #95a5a6;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .subtitle { font-size: 1rem; }
-            .intro-text { 
-                padding: 20px; 
-                text-align: left; /* Switches to left align on small phones to avoid awkward spacing */
-            }
-            .calendar-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+            .legend-container { flex-direction: column; align-items: flex-start; }
+            .calendar-grid { grid-template-columns: 1fr; gap: 25px; }
+            .month-card { padding: 25px 20px; }
         }
     </style>
 </head>
 <body>
 
+<div class="layout-wrapper">
     <div class="container">
         
         <header>
             <img src="https://i.postimg.cc/4xBYD3cX/Screenshot-2026-01-14-12-46-53-47-680d03679600f7af0b4c700c6b270fe7.jpg" alt="Habras International School Logo" class="logo">
-            <h1>ANNUAL SCHOOL ACTIVITY PLAN – 2026</h1>
+            <h1>ANNUAL SCHOOL ACTIVITY PLAN</h1>
             <div class="subtitle">Habras International School, Parimpora, Srinagar</div>
+            <div class="session-badge">Academic Session 2026–27</div>
+            <div class="motto">"Together we learn, lead, and grow."</div>
             
-            <div class="intro-text">
-                Welcome to the Annual School Activity Plan – 2026, thoughtfully designed to promote academic excellence, leadership, creativity, physical fitness, and holistic student development throughout the year. This calendar reflects our commitment to meaningful learning experiences, student engagement, and a vibrant school culture.
-            </div>
+            <p class="intro-text">
+                Thoughtfully designed to promote academic excellence, leadership, creativity, physical fitness, and holistic student development. This calendar reflects our commitment to meaningful learning experiences, student engagement, and a vibrant school culture.
+            </p>
         </header>
+
+        <div class="legend-container">
+            <div class="legend-item"><i class="fas fa-book color-academic"></i> Academic</div>
+            <div class="legend-item"><i class="fas fa-running color-sports"></i> Sports</div>
+            <div class="legend-item"><i class="fas fa-theater-masks color-cultural"></i> Cultural & Celebrations</div>
+            <div class="legend-item"><i class="fas fa-pen-alt color-exam"></i> Assessment</div>
+            <div class="legend-item"><i class="fas fa-flask color-science"></i> Science & Environment</div>
+            <div class="legend-item"><i class="fas fa-bus-alt color-trip"></i> Excursions</div>
+        </div>
 
         <div class="calendar-grid">
 
-            <div class="month-card card-mar">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> MARCH 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> March 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-pen-alt"></i> <span><span class="date">04 to 11 March</span> – FA2 Examination</span></li>
-                    <li><i class="fas fa-mosque"></i> <span><span class="date">09 to 14 March</span> – Preparation for Shabi-Qadr Programme</span></li>
-                    <li><i class="fas fa-bullhorn"></i> <span><span class="date">14 March</span> – Result Declaration of FA2 Exam</span></li>
-                    <li><i class="fas fa-star-and-crescent"></i> <span><span class="date">16 March</span> – Fazilati Shabi-Qadr Programme</span></li>
-                    <li><i class="fas fa-spell-check"></i> <span><span class="date">28 March (Saturday)</span> – Spell Bee Challenge</span></li>
+                    <li class="cat-exam"><i class="fas fa-pen-alt"></i> <div><span class="date">04 to 11 March</span> <span class="event-name">FA2 Examination</span></div></li>
+                    <li class="cat-cultural"><i class="fas fa-mosque"></i> <div><span class="date">09 to 14 March</span> <span class="event-name">Preparation For Shabi-Qadr Programme</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-bullhorn"></i> <div><span class="date">14 March</span> <span class="event-name">Result Declaration Of FA2 Exam</span></div></li>
+                    <li class="cat-cultural"><i class="fas fa-star-and-crescent"></i> <div><span class="date">16 March</span> <span class="event-name">Fazilati Shabi-Qadr Programme</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-spell-check"></i> <div><span class="date">28 March</span> <span class="event-name">Spell Bee Challenge</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-apr">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> APRIL 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> April 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-vote-yea"></i> <span><span class="date">04 April</span> – School Leadership Election</span></li>
-                    <li><i class="fas fa-utensils"></i> <span><span class="date">11 April</span> – Young Chefs Nutrition Exhibition</span></li>
-                    <li><i class="fas fa-running"></i> <span><span class="date">18 April</span> – Sports Day (after two classes)</span></li>
-                    <li><i class="fas fa-question-circle"></i> <span><span class="date">25 April</span> – Quiz Programme (First Half)</span></li>
-                    <li><i class="fas fa-leaf"></i> <span><span class="date">25 April</span> – Green Earth Campaign Day</span></li>
+                    <li class="cat-academic"><i class="fas fa-vote-yea"></i> <div><span class="date">04 April</span> <span class="event-name">School Leadership Election</span></div></li>
+                    <li class="cat-cultural"><i class="fas fa-utensils"></i> <div><span class="date">11 April</span> <span class="event-name">Young Chefs Nutrition Exhibition</span></div></li>
+                    <li class="cat-sports"><i class="fas fa-running"></i> <div><span class="date">18 April</span> <span class="event-name">Sports Day</span><span class="sub-note">– Conducted after first two classes</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-question-circle"></i> <div><span class="date">25 April</span> <span class="event-name">Quiz Programme</span><span class="sub-note">– Conducted in the first half</span></div></li>
+                    <li class="cat-science"><i class="fas fa-leaf"></i> <div><span class="date">25 April</span> <span class="event-name">Green Earth Campaign Day</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-may">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> MAY 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> May 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-hand-holding-medical"></i> <span><span class="date">09 May</span> – Helping Hands & First Aid Initiative (with Health Department Officials)</span></li>
-                    <li><i class="fas fa-file-signature"></i> <span><span class="date">18 to 25 May</span> – FA3 & FA4 Examinations</span></li>
+                    <li class="cat-science"><i class="fas fa-hand-holding-medical"></i> <div><span class="date">09 May</span> <span class="event-name">Helping Hands & First Aid Initiative</span><span class="sub-note">– In collaboration with Health Department</span></div></li>
+                    <li class="cat-exam"><i class="fas fa-file-signature"></i> <div><span class="date">18 to 25 May</span> <span class="event-name">FA3 & FA4 Examinations</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-jun">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> JUNE 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> June 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-bus-alt"></i> <span><span class="date">04 June</span> – Fun Trip</span></li>
-                    <li><i class="fas fa-award"></i> <span><span class="date">06 June</span> – Assessment Outcome Day (Result Declaration)</span></li>
-                    <li><i class="fas fa-shoe-prints"></i> <span><span class="date">20 June</span> – Cross Country Run</span></li>
-                    <li><i class="fas fa-pen-nib"></i> <span><span class="date">27 June</span> – Essay Writing Contest</span></li>
+                    <li class="cat-trip"><i class="fas fa-bus-alt"></i> <div><span class="date">04 June</span> <span class="event-name">Fun Trip Excursion</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-award"></i> <div><span class="date">06 June</span> <span class="event-name">Assessment Outcome Day</span></div></li>
+                    <li class="cat-sports"><i class="fas fa-shoe-prints"></i> <div><span class="date">20 June</span> <span class="event-name">Cross Country Run</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-pen-nib"></i> <div><span class="date">27 June</span> <span class="event-name">Essay Writing Contest</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-jul">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> JULY 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> July 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-flask"></i> <span><span class="date">25 July</span> – Science Exploration Fair</span></li>
+                    <li class="cat-exam"><i class="fas fa-pen-alt"></i> <div><span class="date">10 to 17 July</span> <span class="event-name">FA5 Examination</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-bullhorn"></i> <div><span class="date">24 July</span> <span class="event-name">Result Declaration Of FA5 Exam</span></div></li>
+                    <li class="cat-science"><i class="fas fa-flask"></i> <div><span class="date">25 July</span> <span class="event-name">Science Exploration Fair</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-aug">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> AUGUST 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> August 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-map-marked-alt"></i> <span><span class="date">01 August</span> – Heritage Exploration Trip</span></li>
-                    <li><i class="fas fa-flag-india"></i> <span><span class="date">15 August</span> – National Freedom Celebration</span></li>
-                    <li><i class="fas fa-kaaba"></i> <span><span class="date">22 August</span> – Shan-e-Mustafa ﷺ Day (Eid Milad)</span></li>
+                    <li class="cat-trip"><i class="fas fa-map-marked-alt"></i> <div><span class="date">01 August</span> <span class="event-name">Heritage Exploration Trip</span></div></li>
+                    <li class="cat-cultural"><i class="fas fa-flag-india"></i> <div><span class="date">15 August</span> <span class="event-name">National Freedom Celebration</span></div></li>
+                    <li class="cat-cultural"><i class="fas fa-kaaba"></i> <div><span class="date">22 August</span> <span class="event-name">Shan-e-Mustafa ﷺ Day (Eid Milad)</span></div></li>
+                    <li class="cat-exam"><i class="fas fa-pen-alt"></i> <div><span class="date">24 August to 02 September</span> <span class="event-name">FA6 Examination</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-sep">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> SEPTEMBER 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> September 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-chalkboard-teacher"></i> <span><span class="date">05 September</span> – Teachers’ Day</span></li>
-                    <li><i class="fas fa-smile-beam"></i> <span><span class="date">10 September</span> – Fun Trip</span></li>
-                    <li><i class="fas fa-volleyball-ball"></i> <span><span class="date">26 September</span> – Outdoor Sports Day</span></li>
+                    <li class="cat-cultural"><i class="fas fa-chalkboard-teacher"></i> <div><span class="date">05 September</span> <span class="event-name">Teachers’ Day Celebration</span></div></li>
+                    <li class="cat-academic"><i class="fas fa-bullhorn"></i> <div><span class="date">07 September</span> <span class="event-name">Result Declaration Of FA6 Exam</span></div></li>
+                    <li class="cat-trip"><i class="fas fa-smile-beam"></i> <div><span class="date">10 September</span> <span class="event-name">Fun Trip Excursion</span></div></li>
+                    <li class="cat-sports"><i class="fas fa-volleyball-ball"></i> <div><span class="date">26 September</span> <span class="event-name">Outdoor Sports Day</span></div></li>
                 </ul>
             </div>
 
-            <div class="month-card card-oct">
-                <h3 class="month-title"><i class="far fa-calendar-alt"></i> OCTOBER 2026</h3>
+            <div class="month-card">
+                <h3 class="month-title"><i class="far fa-calendar"></i> October 2026</h3>
                 <ul class="activity-list">
-                    <li><i class="fas fa-book-reader"></i> <span><span class="date">All Month</span> – Final Examination Preparation</span></li>
+                    <li class="cat-academic"><i class="fas fa-book-reader"></i> <div><span class="date">01 to 10 October</span> <span class="event-name">Summative Assessment Preparation</span></div></li>
+                    <li class="cat-exam"><i class="fas fa-file-signature"></i> <div><span class="date">12 to 25 October</span> <span class="event-name">Summative Assessment</span></div></li>
                 </ul>
             </div>
 
         </div>
 
         <footer>
-            <div class="footer-quote">Together we learn, lead, and grow.</div>
+            <div class="disclaimer">
+                <i class="fas fa-info-circle"></i> Dates may be adjusted as per academic and administrative requirements.
+            </div>
             <p class="footer-desc">
                 Habras International School remains dedicated to nurturing confident, responsible, and future-ready learners through purposeful activities and collaborative experiences.
             </p>
             <div class="footer-bottom">
-                <strong>Habras International School, Parimpora, Srinagar</strong><br>
-                Academic Session 2026
+                <strong>Habras International School, Parimpora, Srinagar</strong>
             </div>
         </footer>
 
     </div>
+</div>
 
 </body>
 </html>
