@@ -5,118 +5,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annual School Activity Plan - 2026</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
         
+        :root {
+            /* Define a beautiful, professional color palette */
+            --primary-color: #0a2351;   /* Deep Blue for main titles */
+            --secondary-color: #f59e0b; /* Gold/Yellow for accents, matching the logo */
+            --text-color: #334155;      /* Dark gray for good readability */
+            --bg-gradient-start: #f0f9ff;
+            --bg-gradient-end: #e0f2fe;
+            --card-bg: #ffffff;
+        }
+
         body {
             margin: 0;
-            padding: 40px;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            font-family: 'Open Sans', sans-serif;
+            padding: 20px; /* Reduced padding for mobile */
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align to top for better mobile scrolling */
             min-height: 100vh;
+            box-sizing: border-box;
         }
+
         .slide-container {
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            max-width: 1100px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+            max-width: 1000px;
             width: 100%;
-            padding: 40px;
+            padding: 30px 25px; /* Adjusted padding */
             position: relative;
             overflow: hidden;
+            box-sizing: border-box;
         }
-        /* Subtle background decoration */
+
+        /* subtle background icons */
         .slide-container::before {
-            content: '📚 🔬 🏆 ⚽ 🌍';
+            content: '📚 🏆 ⚽ 🎨';
             position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            opacity: 0.15;
-            letter-spacing: 15px;
+            top: -20px;
+            right: -20px;
+            font-size: 80px;
+            opacity: 0.03;
+            transform: rotate(15deg);
+            pointer-events: none;
         }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .school-logo {
+            max-width: 180px; /* Adjust logo size */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* Optional: add a subtle drop shadow to the logo to make it pop */
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
+
         .header h1 {
-            font-family: 'Montserrat', sans-serif;
-            color: #1a365d;
-            font-weight: 800;
-            font-size: 32px;
-            margin: 0 0 10px 0;
-            letter-spacing: 1px;
+            font-weight: 800; /* Extra bold */
+            color: var(--primary-color);
+            font-size: 36px; /* Larger font size */
+            margin: 0 0 12px 0;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            line-height: 1.2;
         }
+
         .header h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #2b6cb0;
-            font-weight: 600;
-            font-size: 20px;
+            font-weight: 700; /* Bold */
+            color: var(--secondary-color); /* Use the gold color */
+            font-size: 22px;
             margin: 0;
         }
+
+        /* CSS Grid for layout */
         .grid {
             display: grid;
+            /* Default to 2 columns for larger screens (PC) */
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 25px;
         }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px; /* Even less padding on small mobile screens */
+            }
+            .slide-container {
+                padding: 25px 20px;
+            }
+            .header h1 {
+                font-size: 28px; /* Slightly smaller title on mobile */
+            }
+            .header h2 {
+                font-size: 18px;
+            }
+            /* Switch to a single column layout for phones */
+            .grid {
+                grid-template-columns: 1fr; 
+                gap: 20px;
+            }
+        }
+
         .card {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-            border-left: 6px solid #ccc;
-            transition: transform 0.2s;
+            background: #fdfdfe;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.02);
+            border-left: 8px solid #ccc;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
+
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.04);
         }
-        /* Month Colors */
-        .card:nth-child(1) { border-left-color: #3b82f6; } /* March - Blue */
-        .card:nth-child(2) { border-left-color: #f97316; } /* April - Orange */
-        .card:nth-child(3) { border-left-color: #eab308; } /* May - Yellow */
-        .card:nth-child(4) { border-left-color: #22c55e; } /* June - Green */
-        .card:nth-child(5) { border-left-color: #8b5cf6; } /* July - Purple */
-        .card:nth-child(6) { border-left-color: #ef4444; } /* August - Red */
-        .card:nth-child(7) { border-left-color: #14b8a6; } /* September - Teal */
-        .card:nth-child(8) { border-left-color: #64748b; } /* October - Slate */
+
+        /* Add a subtle gradient overlay to the cards */
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.8), rgba(255,255,255,0));
+            pointer-events: none;
+        }
+        
+        /* Month Border Colors with matching light background tints */
+        .card:nth-child(1) { border-left-color: #3b82f6; background-color: #f0f7ff; } /* March - Blue */
+        .card:nth-child(2) { border-left-color: #f97316; background-color: #fff7ed; } /* April - Orange */
+        .card:nth-child(3) { border-left-color: #eab308; background-color: #fefce8; } /* May - Yellow */
+        .card:nth-child(4) { border-left-color: #22c55e; background-color: #f0fdf4; } /* June - Green */
+        .card:nth-child(5) { border-left-color: #8b5cf6; background-color: #fbf7ff; } /* July - Purple */
+        .card:nth-child(6) { border-left-color: #ef4444; background-color: #fef2f2; } /* August - Red */
+        .card:nth-child(7) { border-left-color: #14b8a6; background-color: #f0fdfa; } /* September - Teal */
+        .card:nth-child(8) { border-left-color: #64748b; background-color: #f8fafc; } /* October - Slate */
         
         .card h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0 0 15px 0;
-            font-size: 18px;
-            color: #1e293b;
+            font-weight: 700;
+            margin: 0 0 18px 0;
+            font-size: 20px;
+            color: var(--primary-color);
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
         }
+
         .activity-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            position: relative;
+            z-index: 1;
         }
+
         .activity-list li {
-            margin-bottom: 10px;
-            font-size: 15px;
-            color: #334155;
+            margin-bottom: 14px;
+            font-size: 16px;
+            color: var(--text-color);
             display: flex;
             align-items: flex-start;
-            line-height: 1.4;
+            line-height: 1.5;
         }
+
+        .activity-list li:last-child {
+            margin-bottom: 0;
+        }
+
         .activity-list li .icon {
-            margin-right: 10px;
-            font-size: 18px;
+            margin-right: 12px;
+            font-size: 20px;
+            /* Prevent icon from shrinking */
+            flex-shrink: 0; 
         }
+
         .date {
-            font-weight: 600;
-            color: #0f172a;
-            margin-right: 5px;
+            font-weight: 700; /* Bold dates */
+            color: var(--primary-color);
+            margin-right: 6px;
         }
     </style>
 </head>
 <body>
 
 <div class="slide-container">
+    <div class="logo-container">
+        <img src="https://i.postimg.cc/4xBYD3cX/Screenshot-2026-01-14-12-46-53-47-680d03679600f7af0b4c700c6b270fe7.jpg" alt="Habras International School Logo" class="school-logo">
+    </div>
+
     <div class="header">
         <h1>ANNUAL SCHOOL ACTIVITY PLAN – 2026</h1>
         <h2>Habras International School, Parimpora, Srinagar</h2>
@@ -199,4 +291,3 @@
 
 </body>
 </html>
-
